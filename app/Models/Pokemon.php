@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Pokemon extends Model
 {
     use HasFactory;
 
-    public function types(): HasMany
+    public function types(): BelongsToMany
     {
-        return $this->hasMany(Type::class);
+        return $this->belongsToMany(Type::class);
     }
 
     public function generation(): BelongsTo
