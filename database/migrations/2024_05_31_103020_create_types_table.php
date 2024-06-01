@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::create('types', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignIdFor(Generation::class);
+            $table->foreignIdFor(Generation::class)->constrained();
             $table->timestamps();
         });
     }

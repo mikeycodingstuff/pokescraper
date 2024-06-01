@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::create('pokemon', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignIdFor(Generation::class);
+            $table->foreignIdFor(Generation::class)->constrained();
             $table->integer('base_experience')->nullable();
             $table->integer('height')->nullable();
             $table->integer('weight')->nullable();
