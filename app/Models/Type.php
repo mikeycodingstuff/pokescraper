@@ -10,6 +10,8 @@ class Type extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['id', 'name', 'generation_id'];
+
     public function pokemon(): BelongsToMany
     {
         return $this->belongsToMany(Pokemon::class);

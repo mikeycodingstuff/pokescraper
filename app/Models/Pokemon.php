@@ -11,6 +11,15 @@ class Pokemon extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'id',
+        'name',
+        'generation_id',
+        'base_experience',
+        'height',
+        'weight',
+    ];
+
     public function types(): BelongsToMany
     {
         return $this->belongsToMany(Type::class);
