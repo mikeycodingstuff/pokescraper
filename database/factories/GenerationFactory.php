@@ -2,8 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Helpers\RomanNumeralsConverter;
 use App\Models\Generation;
-use Helpers\RomanNumeralsConverter;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**

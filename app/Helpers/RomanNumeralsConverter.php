@@ -1,6 +1,7 @@
 <?php
 
-namespace Helpers;
+namespace App\Helpers;
+
 
 use Illuminate\Support\Str;
 use InvalidArgumentException;
